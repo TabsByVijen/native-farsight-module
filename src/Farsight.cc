@@ -286,6 +286,18 @@ void Farsight::CreateSnapshot(Snapshot &snapshot, Napi::Env env)
 
     ReadObjects(snapshot, env);
     ClearMissingObjects(snapshot);
+
+    DWORD64 local_player;
+    DWORD64 ult_slot;
+    DWORD64 ss1_slot;
+    DWORD64 ss2_slot;
+    Memory::Read(hProcess, baseAddress + Offsets::LocalPlayer, &local_player, sizeof(DWORD64));
+    Memory::Read(hProcess, local_player + Offsets::ObjSpellbook + sizeof(DWORD64) * 3, &ult_slot, sizeof(DWORD64));
+    Memory::Read(hProcess, local_player + Offsets::ObjSpellbook + sizeof(DWORD64) * 4, &ss1_slot, sizeof(DWORD64));
+    Memory::Read(hProcess, local_player + Offsets::ObjSpellbook + sizeof(DWORD64) * 5, &ss2_slot, sizeof(DWORD64));
+    Memory::Read(hProcess, ult_slot + Offsets::SpellCooldown, &snapshot.ultCD, sizeof(float));
+    Memory::Read(hProcess, ss1_slot + Offsets::SpellCooldown, &snapshot.ss1CD, sizeof(float));
+    Memory::Read(hProcess, ss2_slot + Offsets::SpellCooldown, &snapshot.ss2CD, sizeof(float));
 };
 
 void Farsight::CreateChampionSnapshot(ChampionSnapshot &championSnapshot, Napi::Env env)

@@ -16,6 +16,10 @@ struct Snapshot
     std::vector<std::shared_ptr<GameObject>> inhibitors;
     std::vector<std::shared_ptr<GameObject>> other;
 
+    float ultCD;
+    float ss1CD;
+    float ss2CD;
+
     std::string nextDragonType;
 
     std::map<int, std::shared_ptr<GameObject>> objectMap;
@@ -70,6 +74,11 @@ struct Snapshot
         obj.Set("gameTime", this->gameTime);
 
         obj.Set("nextDragonType", Napi::String::New(env, this->nextDragonType));
+
+        obj.Set("ultCD", Napi::Number::New(env, this->ultCD));
+        obj.Set("ss1CD", Napi::Number::New(env, this->ss1CD));
+        obj.Set("ss2CD", Napi::Number::New(env, this->ss2CD));
+
         return obj;
     }
 };

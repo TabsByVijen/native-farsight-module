@@ -4,6 +4,8 @@ Offsets::Offsets() {};
 
 int Offsets::GameTime = 0x0;
 
+int Offsets::LocalPlayer = 0x0;
+
 int Offsets::ObjectManager = 0x0;
 int Offsets::ObjectMapCount = 0x0;
 int Offsets::ObjectMapRoot = 0x0;
@@ -32,3 +34,10 @@ int Offsets::ObjLvl = 0x0;
 int Offsets::ObjExperience = 0x0;
 int Offsets::ObjCurrentGold = 0x0;
 int Offsets::ObjTotalGold = 0x0;
+int Offsets::ObjSpellbook = 0x0;
+int Offsets::SpellInfo = 0x0;
+int Offsets::SpellData = 0x0;
+int Offsets::SpellName = 0x0;
+int Offsets::SpellLevel = 0x0;
+int Offsets::SpellCooldown = 0x0;
+int Offsets::SpellCharges = 0x0;

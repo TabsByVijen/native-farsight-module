@@ -75,6 +75,7 @@ Napi::Object setOffsets(const Napi::CallbackInfo &info)
     Napi::Object res = Napi::Object::New(env);
 
     Offsets::GameTime = offsets.Get("gameTime").As<Napi::Number>().Int32Value();
+    Offsets::LocalPlayer =offsets.Get("localPlayer").As<Napi::Number>().Int32Value();
     Offsets::ObjectManager = offsets.Get("objectManager").As<Napi::Number>().Int32Value();
     Offsets::ObjectMapCount = offsets.Get("objectMapCount").As<Napi::Number>().Int32Value();
     Offsets::ObjectMapRoot = offsets.Get("objectMapRoot").As<Napi::Number>().Int32Value();
@@ -102,6 +103,13 @@ Napi::Object setOffsets(const Napi::CallbackInfo &info)
     Offsets::ObjTotalGold = offsets.Get("objTotalGold").As<Napi::Number>().Int32Value();
     Offsets::ObjDisplayName = offsets.Get("objDisplayName").As<Napi::Number>().Int32Value();
     Offsets::ObjDisplayNameLength = offsets.Get("objDisplayNameLength").As<Napi::Number>().Int32Value();
+    Offsets::ObjSpellbook = offsets.Get("objSpellbook").As<Napi::Number>().Int32Value();
+    Offsets::SpellInfo = offsets.Get("spellInfo").As<Napi::Number>().Int32Value();
+    Offsets::SpellData = offsets.Get("spellData").As<Napi::Number>().Int32Value();
+    Offsets::SpellName = offsets.Get("spellName").As<Napi::Number>().Int32Value();
+    Offsets::SpellLevel = offsets.Get("spellLevel").As<Napi::Number>().Int32Value();
+    Offsets::SpellCooldown = offsets.Get("spellCooldown").As<Napi::Number>().Int32Value();
+    Offsets::SpellCharges = offsets.Get("spellCharges").As<Napi::Number>().Int32Value();
 
 
    res.Set("success", Napi::Boolean::New(env, true));

@@ -4,6 +4,8 @@ class Offsets {
 
         static int GameTime;
 
+        static int LocalPlayer;
+
         static int ObjIndex;
         static int ObjTeam;
         static int ObjNetworkID;
@@ -20,6 +22,13 @@ class Offsets {
         static int ObjExperience;
         static int ObjCurrentGold;
         static int ObjTotalGold;
+        static int ObjSpellbook;
+        static int SpellInfo;
+        static int SpellData;
+        static int SpellName;
+        static int SpellLevel;
+        static int SpellCooldown;
+        static int SpellCharges;
 
 
         static int ObjectManager;
