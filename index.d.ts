@@ -1,4 +1,4 @@
-declare module "@floh22/farsight" {
+// declare module "@floh22/farsight" {
 
   export interface GameObject {
     name: string;
@@ -62,4 +62,4 @@ declare module "@floh22/farsight" {
   export function setVersion(version: string): void
   export let autoImportChampions: boolean
   export let autoImportOffsets: boolean
-}
+// }

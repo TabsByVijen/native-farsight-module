@@ -1,4 +1,5 @@
 const addon = require('bindings')('farsight');
+const fetch = require('node-fetch').default;
 
 var offsetsSet = false;
 var championsSet = false;
