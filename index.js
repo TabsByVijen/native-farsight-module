@@ -1,4 +1,14 @@
-const addon = require('bindings')('farsight');
+const { app } = require('electron');
+const path = require('path');
+let modulePath;
+
+if (!app.isPackaged) {
+  modulePath = path.join(__dirname, '..', '..', 'build', 'farsight.node');
+} else {
+  modulePath = path.join(process.resourcesPath, 'farsight.node');
+}
+const addon = __non_webpack_require__(modulePath);
+
 const fetch = require('node-fetch').default;
 
 var offsetsSet = false;
