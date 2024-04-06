@@ -1,6 +1,6 @@
 {
-    "gameTime": "0x233E7E8",
-    "localPlayer": "0x23524A8",
+    "gameTime": "0x22AB1B8",
+    "localPlayer": "0x22BE9D8",
     "objIndex": "0x10",
     "objTeam": "0x3C",
     "objNetworkID": "0xC8",
@@ -17,7 +17,7 @@
     "objTotalGold": "0x2850",
     "objDisplayName": "0x60",
     "objDisplayNameLength": "0x70",
-    "objSpellbook": "0x3C58",
+    "objSpellbook": "0x3828",
     "spellInfo": "0x130",
     "spellData": "0x50",
     "spellName": "0x80",
@@ -31,8 +31,8 @@
     "objectMapNodeNetId": "0x20",
     "objectMapNodeObject": "0x28",
     
-    "heroList": "0x232FAC0",
-    "minionList": "0x2334EE0",
-    "turretList": "0x2338490",
+    "heroList": "0x229C400",
+    "minionList": "0x22A18B0",
+    "turretList": "0x22A4E60",
     "inhibitorList": "0x0"
 }
