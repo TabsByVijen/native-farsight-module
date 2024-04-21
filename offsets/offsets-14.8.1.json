@@ -25,7 +25,7 @@
     "spellCooldown": "0x30",
     "spellCharges": "0x5C",
 
-    "objectManager": "0x229C2E8",
+    "objectManager": "0x18E3618",
     "objectMapCount": "0x48",
     "objectMapRoot": "0x40",
     "objectMapNodeNetId": "0x20",
